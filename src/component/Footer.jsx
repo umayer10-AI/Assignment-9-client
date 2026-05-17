@@ -35,15 +35,12 @@ const Footer = () => {
             <li>
               <Link href="/" className="hover:text-cyan-400 transition-all">Home</Link>
             </li>
-
             <li>
               <Link href="/all-appointment" className="hover:text-cyan-400 transition-all">All Appointment</Link>
             </li>
-
             <li>
               <Link href="/dashboard" className="hover:text-cyan-400 transition-all">Dashboard</Link>
             </li>
-
             <li>
               <Link href="/login" className="hover:text-cyan-400 transition-all">Login</Link>
             </li>
@@ -66,7 +63,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-5">Contact Us</h3>
 
           <div className="space-y-4 text-slate-400">
-            <p>📍 Dhanmondi, Dhaka, Bangladesh</p>
+            <p>📍 Narayanganj, Dhaka, Bangladesh</p>
             <p>📞 +880 1883642841</p>
             <p>✉️ support@docappoint.com</p>
           </div>

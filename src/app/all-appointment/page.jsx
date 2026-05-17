@@ -1,5 +1,5 @@
 import React from 'react';
-import AllCards from '../component/AllCards';
+import AllCards from '../../component/AllCards';
 
 const page = () => {
     return (
