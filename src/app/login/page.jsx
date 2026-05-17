@@ -6,18 +6,17 @@ import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const Registerpage = () => {
+const Loginpage = () => {
 
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
         console.log(v)
 
-        const { data, error } = await authClient.signUp.email({
-            name: v.name,
+        const { data, error } = await authClient.signIn.email({
             email: v.email,
             password: v.password,
-            image: v.image,
+            rememberMe: true,
             callbackURL: "/",
         });
 
@@ -37,28 +36,12 @@ const Registerpage = () => {
 
     return (
         <div className='flex justify-center mt-10'>
-            <div className='border shadow shadow-cyan-500 p-5 rounded-xl w-100'>
+            <div className='border shadow shadow-cyan-500 p-5 w-100 rounded-xl'>
                 <div className='mb-5 space-y-1'>
-                    <h2 className='text-2xl font-bold text-center'>Register Account</h2>
+                    <h2 className='text-2xl font-bold text-center'>Login Account</h2>
                     <h2 className='text-gray-500 text-center'>Welcome back to DocAppoint</h2>
                 </div>
-                <Form onSubmit={handleSubmit(a)} className="flex flex-col gap-4 ">
-
-                <TextField
-            isRequired
-            name="name"
-            validate={(value) => {
-              if (value.length < 3) {
-                return "Name must be at least 3 characters";
-              }
-              return null;
-            }}
-          >
-            <Label>Name</Label>
-            <Input placeholder="John Doe" {...register("name", { required: true })}/>
-            <FieldError />
-          </TextField>
-
+                <Form onSubmit={handleSubmit(a)} className="flex flex-col gap-4">
 
         <TextField
             isRequired
@@ -75,21 +58,6 @@ const Registerpage = () => {
             <Input placeholder="john@example.com" {...register("email", { required: true })}/>
             <FieldError />
         </TextField>
-
-                <TextField
-            isRequired
-            name="image"
-            validate={(value) => {
-              if (value.length < 3) {
-                return "Name must be at least 3 characters";
-              }
-              return null;
-            }}
-          >
-            <Label>Image URL</Label>
-            <Input placeholder="Enter your url" {...register("image", { required: true })} />
-            <FieldError />
-          </TextField>
 
         <TextField
             isRequired
@@ -115,29 +83,28 @@ const Registerpage = () => {
         </TextField>
 
         <div className="flex gap-2">
-            <button type="submit" className={'bg-linear-to-r from-cyan-700 to-cyan-500 text-white py-2 rounded-lg w-full font-semibold'}>Register</button>
+            <button type="submit" className={'bg-linear-to-r from-cyan-700 to-cyan-500 text-white py-2 rounded-lg w-full font-semibold'}>Login</button>
         </div>
         <div className='flex items-center gap-2 w-full'>
             <Separator className='flex-1' />
             <h2 className='text-sm text-gray-500'>Or</h2>
             <Separator className='flex-1' />
         </div>
-        
         </Form>
         <button onClick={handleGoogle} className='flex items-center w-full my-4 rounded-lg gap-1 font-semibold justify-center hover:scale-98 duration-300 border py-1 shadow-md'>
-                    <Image width={100} height={100}
-                    src={'/ss.gif'}
-                    alt='logo'
-                    className='h-8 w-8'
-                    />
-                    <h2>Sign in With Google</h2>
-                </button>
-                <div className='flex justify-center'>
-                    <Link href={'/register'} className='text-center'>Do not have an account? <span className='text-cyan-600 font-semibold'>Register</span></Link>
-                </div>
+            <Image width={100} height={100}
+            src={'/ss.gif'}
+            alt='logo'
+            className='h-8 w-8'
+            />
+            <h2>Sign in With Google</h2>
+        </button>
+        <div className='flex justify-center'>
+            <Link href={'/register'} className='text-center'>Do not have an account? <span className='text-cyan-600 font-semibold'>Register</span></Link>
+        </div>
             </div>
         </div>
     );
 };
 
-export default Registerpage;
+export default Loginpage;
