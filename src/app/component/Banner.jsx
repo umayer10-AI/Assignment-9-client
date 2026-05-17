@@ -6,19 +6,11 @@ import { IoSearch } from 'react-icons/io5';
 
 const Banner = () => {
     return (
-        <div className=''>
-            <div className="relative w-full h-[70vh] flex items-center bg-slate-950 text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          src="/path-to-your-image.jpg" 
-          alt="banner" 
-          className="w-full h-full object-cover object-center opacity-40"/>
-        <div className="absolute inset-0 bg-linear-to-r from-slate-950 via-slate-950/80 to-transparent" />
-      </div>
+        <div className='bg-black'>
+            <div className="relative w-full h-[70vh] bg-cover bg-no-repeat bg-[url('/banner.avif')] text-white overflow-hidden">
 
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+      <div className=' flex items-center  bg-linear-to-r from-slate-950/90 via-slate-950/80 to-cyan-800/80 h-full'>
+        <div className="container mx-auto px-6 relative z-30 max-w-5xl">
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/10 border border-white/20 text-emerald-400 mb-6 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"/>VERIFIED HEALTHCARE</span>
 
@@ -37,17 +29,18 @@ const Banner = () => {
         <div className="grid grid-cols-3 gap-6 max-w-lg border-t border-white/10 pt-6">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-white">500+</p>
-            <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">Verified Doctors</p>
+            <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Verified Doctors</p>
           </div>
           <div>
             <p className="text-2xl md:text-3xl font-bold text-white flex items-center gap-1">4.9 <span className="text-amber-400 text-xl">★</span></p>
-            <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg. Rating</p>
+            <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Avg. Rating</p>
           </div>
           <div>
             <p className="text-2xl md:text-3xl font-bold text-white">50k+</p>
-            <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">Appointments</p>
+            <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Appointments</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
         </div>
