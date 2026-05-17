@@ -6,11 +6,11 @@ import { IoSearch } from 'react-icons/io5';
 
 const Banner = () => {
     return (
-        <div>
-            <div className="relative w-full h-[60vh] flex items-center bg-slate-950 text-white overflow-hidden">
+        <div className=''>
+            <div className="relative w-full h-[70vh] flex items-center bg-slate-950 text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-        width={100} height={100} 
+        fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src="/path-to-your-image.jpg" 
           alt="banner" 
@@ -19,12 +19,10 @@ const Banner = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 max-w-5xl">
-
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/10 border border-white/20 text-emerald-400 mb-6 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"/>VERIFIED HEALTHCARE</span>
 
-
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight max-w-2xl mb-4 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight max-w-2xl mb-4 leading-tight">
           Find & Book the Best <span className="bg-linear-to-r from-cyan-700 to-cyan-500 text-transparent bg-clip-text">Doctors</span> Near You</h1>
         <p className="text-slate-400 text-lg max-w-xl mb-8 leading-relaxed">
           Verified specialists, instant confirmation, and transparent fees — your health, simplified.</p>
@@ -42,9 +40,7 @@ const Banner = () => {
             <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">Verified Doctors</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl font-bold text-white flex items-center gap-1">
-              4.9 <span className="text-amber-400 text-xl">★</span>
-            </p>
+            <p className="text-2xl md:text-3xl font-bold text-white flex items-center gap-1">4.9 <span className="text-amber-400 text-xl">★</span></p>
             <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg. Rating</p>
           </div>
           <div>
