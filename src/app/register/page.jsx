@@ -3,11 +3,19 @@ import { Button, Description, FieldError, Form, Input, Label, Separator, TextFie
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useForm } from 'react-hook-form';
 
-const page = () => {
+const Registerpage = () => {
+
+    const {register,handleSubmit,formState: { errors }} = useForm()
+
+    const a = async (v) => {
+        console.log(v)
+    }
+
     return (
         <div className='flex justify-center'>
-            <Form className="flex w-100 flex-col gap-4 border p-4">
+            <Form onSubmit={handleSubmit(a)} className="flex w-100 flex-col gap-4 border p-4">
 
                 <TextField
             isRequired
@@ -20,24 +28,8 @@ const page = () => {
             }}
           >
             <Label>Name</Label>
-            <Input placeholder="John Doe" />
+            <Input placeholder="John Doe" {...register("name", { required: true })}/>
             <FieldError />
-          </TextField>
-
-                <TextField
-            isRequired
-            name="image"
-            validate={(value) => {
-              if (value.length < 3) {
-                return "Name must be at least 3 characters";
-              }
-              return null;
-            }}
-          >
-            <Label>Image URL</Label>
-            <Input placeholder="Enter your url" />
-            <FieldError />
-          </TextField>
 
         <TextField
             isRequired
@@ -51,9 +43,26 @@ const page = () => {
             }}
         >
             <Label>Email</Label>
-            <Input placeholder="john@example.com" />
+            <Input placeholder="john@example.com" {...register("email", { required: true })}/>
             <FieldError />
         </TextField>
+
+          </TextField>
+
+                <TextField
+            isRequired
+            name="image"
+            validate={(value) => {
+              if (value.length < 3) {
+                return "Name must be at least 3 characters";
+              }
+              return null;
+            }}
+          >
+            <Label>Image URL</Label>
+            <Input placeholder="Enter your url" {...register("image", { required: true })} />
+            <FieldError />
+          </TextField>
 
         <TextField
             isRequired
@@ -74,7 +83,7 @@ const page = () => {
             }}
         >
             <Label>Password</Label>
-            <Input placeholder="Enter your password" />
+            <Input placeholder="Enter your password" {...register("password", { required: true })}/>
             <FieldError />
         </TextField>
 
@@ -100,4 +109,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Registerpage;
