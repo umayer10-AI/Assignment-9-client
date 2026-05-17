@@ -1,8 +1,5 @@
-import Image from 'next/image';
 import React from 'react';
-import { BsSearch } from 'react-icons/bs';
 import { FaSearch } from 'react-icons/fa';
-import { IoSearch } from 'react-icons/io5';
 
 const Banner = () => {
     return (
