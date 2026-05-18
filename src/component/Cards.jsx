@@ -1,12 +1,13 @@
 import { Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Cards = ({doctor}) => {
 
     return (
         <div>
-            <div className="max-w-sm rounded-2xl hover:-translate-y-2 overflow-hidden group border border-slate-200 shadow-lg bg-white hover:shadow-xl hover:shadow-cyan-500 transition-all duration-300">
+            <div className="max-w-sm rounded-2xl hover:-translate-y-2 h-full overflow-hidden group border border-slate-200 shadow-lg bg-white hover:shadow-xl hover:shadow-cyan-500 transition-all duration-300">
 
             <div className="relative h-60 w-full">
                 <Image
@@ -38,9 +39,9 @@ const Cards = ({doctor}) => {
                         <h3 className="text-2xl font-bold text-cyan-700">৳ {doctor.fee}</h3>
                     </div>
 
-                    <button className="px-5 py-2 rounded-xl bg-linear-to-r from-cyan-700 to-cyan-500 text-white font-semibold hover:scale-105 transition-all duration-300">
+                    <Link href={`/all-appointment/${doctor._id}`} className="px-5 py-2 rounded-xl bg-linear-to-r from-cyan-700 to-cyan-500 text-white font-semibold hover:scale-105 transition-all duration-300">
                         View Details
-                    </button>
+                    </Link>
 
                 </div>
 

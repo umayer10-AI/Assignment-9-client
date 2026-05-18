@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 
@@ -17,7 +18,7 @@ const Banner = () => {
           Verified specialists, instant confirmation, and transparent fees — your health, simplified.</p>
 
         <div className="flex flex-wrap gap-4 mb-12">
-          <button className="px-6 py-3 rounded-xl bg-linear-to-r from-cyan-700 to-cyan-500 text-white hover:bg-teal-400 font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg shadow-teal-500/20"><FaSearch />Browse Doctors</button>
+          <Link href={'/all-appointment'} className="px-6 py-3 rounded-xl bg-linear-to-r from-cyan-700 to-cyan-500 text-white hover:bg-teal-400 font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg shadow-teal-500/20"><FaSearch />Browse Doctors</Link>
           <button className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all duration-200 backdrop-blur-sm">
             My Bookings
           </button>
