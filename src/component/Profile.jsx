@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaEdit,
 } from "react-icons/fa";
+import ProfileModal from "./ProfileModal";
 
 const ProfilePage = () => {
 
@@ -16,7 +17,7 @@ const ProfilePage = () => {
     // console.log(user)
 
   return (
-    <div className=" bg-slate-100 flex items-center justify-center px-4 py-5">
+    <div className=" bg-[#e8fafd] rounded-2xl flex items-center justify-center px-4 py-5">
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden">
         
         <div className="h-35 bg-linear-to-r from-cyan-700 to-cyan-500 relative">
@@ -63,7 +64,8 @@ const ProfilePage = () => {
 
           </div>
 
-          <button className="mt-5 inline-flex items-center gap-3 bg-linear-to-r from-cyan-700 to-cyan-500 hover:scale-105 transition-all duration-300 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg"><FaEdit />Edit Profile</button>
+          {/* <button className="mt-5 inline-flex items-center gap-3 bg-linear-to-r from-cyan-700 to-cyan-500 hover:scale-105 transition-all duration-300 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg"><FaEdit />Edit Profile</button> */}
+          <ProfileModal p={user}></ProfileModal>
         </div>
       </div>
     </div>
