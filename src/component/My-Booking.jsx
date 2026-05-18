@@ -2,21 +2,13 @@
 import React from "react";
 import { FaCalendarAlt, FaClock, FaEdit, FaTrash } from "react-icons/fa";
 
-const AppointmentCard = () => {
+const AppointmentCard = ({appointment}) => {
 
-  const appointment = {
-    _id: "6a0af166d852585fdb4330af",
-    doctor: "Dr. Tanvir Hasan",
-    patient: "Umayer",
-    date: "2026-04-29",
-    time: "16:55",
-    reason: "Teeth",
-  };
+
 
   return (
-    <div className="max-w-lg mx-auto bg-white rounded-3xl shadow-lg border border-slate-100 p-6 hover:shadow-2xl transition-all duration-300">
+    <div className="max-w-lg mx-auto bg-white w-full rounded-3xl shadow-lg border border-slate-100 p-6 hover:shadow-2xl transition-all duration-300">
       
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-slate-800">

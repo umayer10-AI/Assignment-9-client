@@ -1,12 +1,12 @@
-"use client"
 import AppointmentCard from '@/component/My-Booking';
-import { Data } from '@/context/Context';
+import { getBookingData } from '@/lib/data';
 import { Button, Tabs } from '@heroui/react';
-import React, { useContext } from 'react';
+import React from 'react';
 
-const Dashboardpage = () => {
+const Dashboardpage = async () => {
 
-    const {tab,setT} = useContext(Data)
+    const data = await getBookingData()
+    console.log(data)
 
     return (
         <div className='w-[80%] mx-auto'>
@@ -26,7 +26,11 @@ const Dashboardpage = () => {
         </Tabs.List>
       </Tabs.ListContainer>
       <Tabs.Panel className="pt-4" id="booking">
-        <AppointmentCard></AppointmentCard>
+        <div className='flex flex-col gap-5 bg-[#e8fafd] border'>
+            {
+                data.map(v => <AppointmentCard key={v._id} appointment={v}></AppointmentCard>)
+            }
+        </div>
       </Tabs.Panel>
       <Tabs.Panel className="pt-4" id="profile">
         <p>Track your metrics and analyze performance data.</p>
