@@ -1,9 +1,16 @@
 "use client";
 import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
 import React from 'react';
+import { useForm } from "react-hook-form";
 import { FaHeartbeat } from "react-icons/fa";
 
 const ModalForm = ({p}) => {
+
+    const {register,handleSubmit,formState: { errors }} = useForm()
+
+    const a = async (v) => {
+        console.log(v)
+    }
 
     return (
         <div>
@@ -21,13 +28,13 @@ const ModalForm = ({p}) => {
                 </div>
               <Modal.Heading className="text-center">Booking Appointment</Modal.Heading>
               <p className="text-sm text-muted text-center">
-                With dr.
+                With {p.name}
               </p>
             </Modal.Header>
             <Modal.Body className="p-2">
               <Surface>
                 <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 my-2">
-      <form className="space-y-4 text-slate-700">
+      <form onSubmit={handleSubmit(a)} className="space-y-4 text-slate-700">
         
         <div className="form-control w-full">
           <label className="label font-semibold text-sm pb-1 text-slate-800">User Email</label>
@@ -55,24 +62,13 @@ const ModalForm = ({p}) => {
             type="text" 
             name="patientName"
             placeholder="Enter your name" 
+            {...register("name", { required: true })}
             required
             className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa]"
           />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* <div className="form-control w-full">
-            <label className="label font-semibold text-sm pb-1 text-slate-800">Gender *</label>
-            <select 
-              name="gender"
-              required
-              className="select select-bordered w-full py-2 px-2 rounded-2xl shadow border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa] font-normal"
-            >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Others">Others</option>
-            </select>
-          </div> */}
 
           <Select className="w-40" placeholder="Select gender" selectionMode="multiple">
       <Label>Gender</Label>
@@ -105,6 +101,7 @@ const ModalForm = ({p}) => {
               type="text" 
               name="phone"
               placeholder="01XXXXXXXXX"
+              {...register("phone", { required: true })}
               required
               className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa]"
             />
@@ -117,6 +114,7 @@ const ModalForm = ({p}) => {
             <input 
               type="date" 
               name="date"
+              {...register("date", { required: true })}
               required
               className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa] text-slate-500"
             />
@@ -127,6 +125,7 @@ const ModalForm = ({p}) => {
             <input 
               type="time" 
               name="time"
+              {...register("time", { required: true })}
               required
               className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa] text-slate-500"
             />
@@ -138,6 +137,7 @@ const ModalForm = ({p}) => {
           <input 
             type="text" 
             name="reason"
+            {...register("reason")}
             placeholder="Brief reason for visit"
             className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa]"
           />
