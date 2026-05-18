@@ -1,3 +1,4 @@
+import ModalForm from "@/component/ModalForm";
 import { getIdData } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
@@ -49,7 +50,7 @@ const DoctorDetailsPage = async ({params}) => {
             </div>
           </div>
 
-          <button className="mt-8 bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-blue-700 transition-all duration-300 text-white py-3 rounded-xl font-semibold text-lg">Book Appointment</button>
+          <ModalForm p={doctor}></ModalForm>
         </div>
       </div>
     </div>
