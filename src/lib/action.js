@@ -11,6 +11,7 @@ export const postData = async (v) => {
     })
     const data = await res.json()
     if(data.insertedId){
+        toast.success('Data Added')
         redirect('/dashboard')
     }
     return data

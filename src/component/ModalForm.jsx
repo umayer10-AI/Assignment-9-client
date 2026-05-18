@@ -1,5 +1,6 @@
 "use client";
 import { postData } from "@/lib/action";
+import { useSession } from "@/lib/auth-client";
 import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -7,18 +8,23 @@ import { FaHeartbeat } from "react-icons/fa";
 
 const ModalForm = ({p}) => {
 
+    const {data} = useSession()
+    const user = data?.user
+    // console.log(user)
+
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
         
         const b = {
+            email: user?.email,
             doctor: p.name,
             patient: v.name,
             date: v.date,
             time: v.time,
             reason: v.reason,
         }
-        console.log(b)
+        // console.log(b)
         await postData(b)
     }
 
@@ -50,7 +56,7 @@ const ModalForm = ({p}) => {
           <label className="label font-semibold text-sm pb-1 text-slate-800">User Email</label>
           <input 
             type="email" 
-            value="mdumayer10@gmail.com"
+            value={user?.email}
             disabled 
             className="input input-bordered w-full bg-slate-50 text-slate-500 cursor-not-allowed border-slate-200"
           />

@@ -13,7 +13,7 @@ const Navbar = () => {
                     <div className="bg-linear-to-r from-cyan-700 to-cyan-500 p-2 rounded-xl">
                         <FaHeartbeat className="text-2xl text-white" />
                     </div>
-                    <h2 className='text-2xl font-bold text-cyan-800'>DocAppoint</h2>
+                    <h2 className='text-2xl font-bold'>DocAppoint</h2>
                 </div>
 
                 <div className='hidden md:flex items-center gap-10'>
