@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 const Loginpage = () => {
 
@@ -21,10 +22,10 @@ const Loginpage = () => {
         });
 
         if(data){
-            alert("Data Successfully")
+            toast.success("User Login Successfully")
         }
         if(error){
-            alert(error.message)
+            toast.error(error.message)
         }
     }
 

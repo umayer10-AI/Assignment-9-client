@@ -3,15 +3,17 @@ import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 const Registerpage = () => {
 
     const {register,handleSubmit,formState: { errors }} = useForm()
+    const router = useRouter()
 
     const a = async (v) => {
-        console.log(v)
 
         const { data, error } = await authClient.signUp.email({
             name: v.name,
@@ -22,10 +24,12 @@ const Registerpage = () => {
         });
 
         if(data){
-            alert("Data Successfully")
+            toast.success("User Register Successfully")
+            router.push('/')
+
         }
         if(error){
-            alert(error.message)
+            toast.error(error.message)
         }
     }
 

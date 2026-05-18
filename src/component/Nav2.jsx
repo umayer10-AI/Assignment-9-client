@@ -4,13 +4,13 @@ import { Avatar } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const Nav2 = () => {
 
     const p = usePathname();
     const { data: session } = authClient.useSession()
     const user = session?.user
-    // console.log(session)
 
     return (
         <div>

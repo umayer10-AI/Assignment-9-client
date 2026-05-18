@@ -19,7 +19,6 @@ const EditModal = ({p}) => {
             time: v.time,
             reason: v.reason,
         }
-
         await updateUserData(b,p._id)
     }
 
