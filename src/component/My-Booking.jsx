@@ -56,9 +56,8 @@ const AppointmentCard = ({appointment}) => {
 
       <div className="flex items-center gap-4 mt-5">
 
-        <button
-          className="flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-xl font-semibold transition-all duration-200 px-4"><FaEdit />Update</button>
-          <EditModal></EditModal>
+
+        <EditModal p={appointment}></EditModal>
 
         <button onClick={b}
           className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2 rounded-xl font-semibold transition-all duration-200 px-4"

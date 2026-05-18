@@ -28,3 +28,16 @@ export const deleteBookingData = async (id) => {
     }
     return data
 }
+
+export const updateUserData = async (v,id) => {
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`,{
+    //     method: "PATCH",
+    //     headers:{
+    //         'content-type':"application/json"
+    //     },
+    //     body: JSON.stringify(v)
+    // })
+    // const data = await res.json()
+    console.log(v,id)
+    // return data
+}

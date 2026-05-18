@@ -1,38 +1,44 @@
 "use client";
-import { postData } from "@/lib/action";
-import { useSession } from "@/lib/auth-client";
+import { postData, updateUserData } from "@/lib/action";
+import { authClient, useSession } from "@/lib/auth-client";
 import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { FaHeartbeat } from "react-icons/fa";
+import { FaEdit, FaHeartbeat } from "react-icons/fa";
 
 
-const EditModal = () => {
+const EditModal = ({p}) => {
 
-    const {data} = useSession()
-    const user = data?.user
-    // console.log(user)
+    // const {data} = useSession()
+    // const user = data?.user
+    // console.log(p)
 
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
+
+        const b = {
+            name: v.name,
+            date: v.date,
+            time: v.time,
+            reason: v.reason,
+        }
         
-        // const b = {
-        //     email: user?.email,
-        //     doctor: p.name,
-        //     patient: v.name,
+        // await authClient.updateUser({
+        //     name: v.name,
         //     date: v.date,
         //     time: v.time,
         //     reason: v.reason,
-        // }
-        // console.log(v)
-        // await postData(b)
+        // })
+        // console.log(b,p._id)
+        await updateUserData(b,p._id)
     }
 
     return (
         <div>
             <Modal>
-                  <Button className="mt-8 bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-blue-700 transition-all duration-300 text-white py-7 w-full rounded-xl font-semibold text-lg">Book Appointment</Button>
+                  <Button
+                        className="flex items-cente text-[16px] justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white py-5 rounded-xl font-semibold transition-all duration-200 px-4"><FaEdit />Update</Button>
                   <Modal.Backdrop>
                     <Modal.Container placement="auto">
                       <Modal.Dialog>
@@ -44,9 +50,6 @@ const EditModal = () => {
                                 </div>
                             </div>
                           <Modal.Heading className="text-center">Update Appointment</Modal.Heading>
-                          <p className="text-sm text-muted text-center">
-                            {/* With {p.name} */}
-                          </p>
                         </Modal.Header>
                         <Modal.Body className="p-2">
                           <Surface>
@@ -57,7 +60,7 @@ const EditModal = () => {
                       <label className="label font-semibold text-sm pb-1 text-slate-800">Doctor Name</label>
                       <input 
                         type="text" 
-                        // value={p.name} 
+                        value={p.doctor} 
                         disabled 
                         className="input input-bordered w-full bg-slate-50 text-slate-500 cursor-not-allowed border-slate-200"
                       />
@@ -115,7 +118,7 @@ const EditModal = () => {
                       <button 
                         type="submit" 
                         className="btn w-full bg-[#0096aa] hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
-                        Confirm Booking
+                        Update Booking
                       </button>
                     </div>
                   </form>
