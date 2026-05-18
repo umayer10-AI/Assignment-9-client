@@ -1,4 +1,5 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import { Button, ListBox, Modal, Surface,Select, Label } from '@heroui/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -10,6 +11,11 @@ const ProfileModal = ({p}) => {
 
     const a = async (v) => {
         console.log(v)
+
+        await authClient.updateUser({
+            name: v.name,
+            image: v.image,
+        })
     }
 
     return (
@@ -57,6 +63,7 @@ const ProfileModal = ({p}) => {
                     <div className="pt-2">
                       <button 
                         type="submit" 
+                        slot='close'
                         className="btn w-full bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
                         Update Profile
                       </button>

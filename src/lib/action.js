@@ -1,3 +1,4 @@
+import { json } from "better-auth"
 import { redirect } from "next/navigation"
 
 export const postData = async (v) => {
@@ -12,5 +13,12 @@ export const postData = async (v) => {
     if(data.insertedId){
         redirect('/dashboard')
     }
+    return data
+}
+
+export const deleteBookingData = async (id) => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`)
+    const data = await res.json()
+    console.log(id)
     return data
 }

@@ -1,10 +1,14 @@
 "use client";
+import { deleteBookingData } from "@/lib/action";
 import React from "react";
 import { FaCalendarAlt, FaClock, FaEdit, FaTrash } from "react-icons/fa";
 
 const AppointmentCard = ({appointment}) => {
 
-
+    const b = async () => {
+        await deleteBookingData(appointment._id)
+        // console.log(appointment._id)
+    }
 
   return (
     <div className="max-w-lg mx-auto bg-white w-full rounded-3xl shadow-lg border border-slate-100 p-6 hover:shadow-2xl transition-all duration-300">
@@ -58,7 +62,7 @@ const AppointmentCard = ({appointment}) => {
           Update
         </button>
 
-        <button
+        <button onClick={b}
           className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2 rounded-xl font-semibold transition-all duration-200 px-4"
         >
           <FaTrash />
