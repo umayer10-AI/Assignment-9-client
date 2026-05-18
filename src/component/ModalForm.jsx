@@ -1,4 +1,5 @@
 "use client";
+import { postData } from "@/lib/action";
 import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -9,7 +10,16 @@ const ModalForm = ({p}) => {
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
-        console.log(v)
+        
+        const b = {
+            doctor: p.name,
+            patient: v.name,
+            date: v.date,
+            time: v.time,
+            reason: v.reason,
+        }
+        console.log(b)
+        await postData(b)
     }
 
     return (
@@ -33,7 +43,7 @@ const ModalForm = ({p}) => {
             </Modal.Header>
             <Modal.Body className="p-2">
               <Surface>
-                <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 my-2">
+                <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
       <form onSubmit={handleSubmit(a)} className="space-y-4 text-slate-700">
         
         <div className="form-control w-full">
