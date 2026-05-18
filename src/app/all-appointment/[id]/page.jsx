@@ -23,34 +23,19 @@ const DoctorDetailsPage = async ({params}) => {
         <div className="flex flex-col justify-center">
           <p className="text-cyan-700 font-semibold text-lg">{doctor.specialty}</p>
           <h1 className="text-4xl font-bold mt-2">{doctor.name}</h1>
-
           <p className="text-gray-500 font-semibold mt-4">{doctor.description}</p>
 
           <div className="mt-6 space-y-3">
-            <p>
-              <span className="font-semibold">Experience:</span>{" "}{doctor.experience}</p>
+            <p><span className="font-semibold">Experience:</span>{" "}{doctor.experience}</p><p>
+              <span className="font-semibold">Rating:</span>{" "}⭐ {doctor.rating}</p>
 
-            <p>
-              <span className="font-semibold">Rating:</span>{" "}
-              ⭐ {doctor.rating}
-            </p>
-
-            <p>
-              <span className="font-semibold">Hospital:</span>{" "}
-              {doctor.hospital}
-            </p>
-
-            <p>
-              <span className="font-semibold">Location:</span>{" "}
-              {doctor.location}
-            </p>
+            <p><span className="font-semibold">Hospital:</span>{" "}{doctor.hospital}</p>
+            <p><span className="font-semibold">Location:</span>{" "}{doctor.location}</p>
             <p><span className="font-semibold">Consultation Fee:</span>{" "}<span className="font-semibold text-green-600 text-xl">৳ {doctor.fee}</span></p>
           </div>
 
           <div className="mt-6">
-            <h2 className="font-semibold text-lg mb-2">
-              Availability
-            </h2>
+            <h2 className="font-semibold text-lg mb-2">Availability</h2>
 
             <div className="flex flex-wrap gap-3">
               {doctor.availability.map((time, index) => (
@@ -64,9 +49,7 @@ const DoctorDetailsPage = async ({params}) => {
             </div>
           </div>
 
-          <button className="mt-8 bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-blue-700 transition-all duration-300 text-white py-3 rounded-xl font-semibold text-lg">
-            Book Appointment
-          </button>
+          <button className="mt-8 bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-blue-700 transition-all duration-300 text-white py-3 rounded-xl font-semibold text-lg">Book Appointment</button>
         </div>
       </div>
     </div>
