@@ -9,28 +9,17 @@ import { FaEdit, FaHeartbeat } from "react-icons/fa";
 
 const EditModal = ({p}) => {
 
-    // const {data} = useSession()
-    // const user = data?.user
-    // console.log(p)
-
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
 
         const b = {
-            name: v.name,
+            patient: v.name,
             date: v.date,
             time: v.time,
             reason: v.reason,
         }
-        
-        // await authClient.updateUser({
-        //     name: v.name,
-        //     date: v.date,
-        //     time: v.time,
-        //     reason: v.reason,
-        // })
-        // console.log(b,p._id)
+
         await updateUserData(b,p._id)
     }
 
@@ -71,6 +60,7 @@ const EditModal = ({p}) => {
                       <input 
                         type="text" 
                         name="patientName"
+                        defaultValue={p.patient}
                         placeholder="Enter your name" 
                         {...register("name", { required: true })}
                         required
@@ -85,6 +75,7 @@ const EditModal = ({p}) => {
                         <input 
                           type="date" 
                           name="date"
+                          defaultValue={p.date}
                           {...register("date", { required: true })}
                           required
                           className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa] text-slate-500"
@@ -96,6 +87,7 @@ const EditModal = ({p}) => {
                         <input 
                           type="time" 
                           name="time"
+                          defaultValue={p.time}
                           {...register("time", { required: true })}
                           required
                           className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa] text-slate-500"
@@ -108,6 +100,7 @@ const EditModal = ({p}) => {
                       <input 
                         type="text" 
                         name="reason"
+                        defaultValue={p.reason}
                         {...register("reason")}
                         placeholder="Brief reason for visit"
                         className="input input-bordered w-full border-slate-300 focus:border-[#0096aa] focus:outline-none focus:ring-1 focus:ring-[#0096aa]"
@@ -115,7 +108,7 @@ const EditModal = ({p}) => {
                     </div>
             
                     <div className="pt-2">
-                      <button 
+                      <button slot="close"
                         type="submit" 
                         className="btn w-full bg-[#0096aa] hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
                         Update Booking
