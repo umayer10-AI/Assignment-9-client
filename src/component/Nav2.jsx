@@ -10,7 +10,7 @@ const Nav2 = () => {
     const p = usePathname();
     const { data: session } = authClient.useSession()
     const user = session?.user
-    console.log(session)
+    // console.log(session)
 
     return (
         <div>
