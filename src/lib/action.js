@@ -1,5 +1,5 @@
-import { json } from "better-auth"
 import { redirect } from "next/navigation"
+import toast from "react-hot-toast"
 
 export const postData = async (v) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking`,{
@@ -17,8 +17,13 @@ export const postData = async (v) => {
 }
 
 export const deleteBookingData = async (id) => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`,{
+        method: "DELETE"
+    })
     const data = await res.json()
-    console.log(id)
+    if(data.deletedCount > 0){
+        toast.success('Data Deleted')
+        redirect('/dashboard')
+    }
     return data
 }
