@@ -3,21 +3,21 @@ import React from 'react';
 const Section2 = () => {
     return (
         <div>
-            <section className="py-20 mt-10 bg-white">
+            <section className="py-20 mt-10 bg-white dark:bg-blue-950">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="grid md:grid-cols-2 gap-12 items-center">
 
       <div>
-        <span className="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold">
+        <span className="bg-cyan-100 text-green-500 dark:bg-slate-700 px-4 py-2 rounded-full text-sm font-semibold">
           Live Consultation
         </span>
 
-        <h2 className="text-4xl font-bold text-slate-800 mt-6 leading-tight">
+        <h2 className="text-4xl font-bold text-slate-800 dark:text-white mt-6 leading-tight">
           Video Consultation <br /> With Expert Doctors
         </h2>
 
-        <p className="text-slate-600 mt-6 text-lg leading-relaxed">
+        <p className="text-slate-600 dark:text-gray-400 mt-6 text-lg leading-relaxed">
           Connect with experienced doctors from anywhere through secure
           video calls using Google Meet or Zoom integration.
           Get instant medical support without visiting the hospital.
@@ -35,7 +35,7 @@ const Section2 = () => {
                 HD Video Consultation
               </h4>
 
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-gray-400 text-sm">
                 Smooth and secure live video appointments.
               </p>
             </div>
@@ -51,7 +51,7 @@ const Section2 = () => {
                 Flexible Scheduling
               </h4>
 
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-gray-400 text-sm">
                 Choose your preferred consultation time easily.
               </p>
             </div>
@@ -67,7 +67,7 @@ const Section2 = () => {
                 Secure & Private
               </h4>
 
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-gray-400 text-sm">
                 Your medical discussions stay fully protected.
               </p>
             </div>
@@ -107,7 +107,7 @@ const Section2 = () => {
             />
 
             <div>
-              <h4 className="font-semibold">
+              <h4 className="font-semibold dark:text-black">
                 Dr. Umayer Ahmad
               </h4>
 

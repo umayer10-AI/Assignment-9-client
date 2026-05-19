@@ -46,7 +46,6 @@ const FilteringAllCArds = ({search}) => {
         );
     }
 
-    // return <AllCards data={filterData}></AllCards>
     return (
         <div>
             {
