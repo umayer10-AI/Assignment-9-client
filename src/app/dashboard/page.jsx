@@ -49,7 +49,7 @@ const Dashboardpage = async () => {
                     Book Appointment
                 </button>
             </div>
-            : <div className='flex flex-col gap-5 bg-[#e8fafd] p-5 rounded-xl'>
+            : <div className='flex flex-col gap-5 bg-[#e8fafd] dark:bg-blue-950 p-5 rounded-xl'>
                     {
                         data.map(v => <AppointmentCard key={v._id} appointment={v}></AppointmentCard>)
                     }

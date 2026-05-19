@@ -96,7 +96,7 @@ const Loginpage = () => {
             <Image width={100} height={100}
             src={'/ss.gif'}
             alt='logo'
-            className='h-8 w-8'
+            className='h-8 w-8 rounded-full'
             />
             <h2>Sign in With Google</h2>
         </button>

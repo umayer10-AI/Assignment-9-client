@@ -44,21 +44,21 @@ const EditModal = ({p}) => {
                         </Modal.Header>
                         <Modal.Body className="p-2">
                           <Surface>
-                            <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                            <div className="p-6 bg-white dark:bg-slate-950 rounded-2xl shadow-sm border border-gray-100">
                   <form onSubmit={handleSubmit(a)} className="space-y-4 text-slate-700">
             
                     <div className="form-control w-full">
-                      <label className="label font-semibold text-sm pb-1 text-slate-800">Doctor Name</label>
+                      <label className="label font-semibold text-sm dark:text-white pb-1">Doctor Name</label>
                       <input 
                         type="text" 
                         value={p.doctor} 
                         disabled 
-                        className="input input-bordered w-full bg-slate-50 text-slate-500 cursor-not-allowed border-slate-200"
+                        className="input input-bordered w-full dark:bg-slate-950 dark:text-white bg-slate-50 text-slate-500 cursor-not-allowed border-slate-200"
                       />
                     </div>
             
                     <div className="w-full">
-                      <label className="label font-semibold text-sm pb-1 text-slate-800">Patient Name *</label>
+                      <label className="label font-semibold text-sm pb-1 text-slate-800 dark:text-white">Patient Name *</label>
                       <input 
                         type="text" 
                         name="patientName"
@@ -73,7 +73,7 @@ const EditModal = ({p}) => {
             
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="form-control w-full">
-                        <label className="label font-semibold text-sm pb-1 text-slate-800">Date *</label>
+                        <label className="label font-semibold text-sm dark:text-white pb-1 text-slate-800">Date *</label>
                         <input 
                           type="date" 
                           name="date"
@@ -85,7 +85,7 @@ const EditModal = ({p}) => {
                       </div>
             
                       <div className="form-control w-full">
-                        <label className="label font-semibold text-sm pb-1 text-slate-800">Time *</label>
+                        <label className="label font-semibold text-sm pb-1 dark:text-white text-slate-800">Time *</label>
                         <input 
                           type="time" 
                           name="time"
@@ -98,7 +98,7 @@ const EditModal = ({p}) => {
                     </div>
             
                     <div className="form-control w-full">
-                      <label className="label font-semibold text-sm pb-1 text-slate-800">Reason (optional)</label>
+                      <label className="label font-semibold text-sm pb-1 dark:text-white text-slate-800">Reason (optional)</label>
                       <input 
                         type="text" 
                         name="reason"
@@ -112,7 +112,7 @@ const EditModal = ({p}) => {
                     <div className="pt-2">
                       <button slot="close"
                         type="submit" 
-                        className="btn w-full bg-[#0096aa] hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
+                        className="btn w-full bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
                         Save Changes
                       </button>
                     </div>
