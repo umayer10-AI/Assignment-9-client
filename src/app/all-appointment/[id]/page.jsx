@@ -16,7 +16,7 @@ const DoctorDetailsPage = async ({params}) => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      <div className="grid md:grid-cols-2 gap-10 bg-white shadow-lg rounded-3xl p-6">
+      <div className="grid md:grid-cols-2 gap-10 bg-white dark:bg-slate-900 shadow-lg shadow-cyan-500 rounded-3xl p-6">
         
         <div className="relative w-full h-60 lg:h-112 rounded-2xl overflow-hidden">
           <Image
@@ -51,7 +51,7 @@ const DoctorDetailsPage = async ({params}) => {
               {doctor.availability.map((time, index) => (
                 <span
                   key={index}
-                  className="bg-cyan-100 text-cyan-700 font-semibold px-4 py-2 rounded-full text-sm"
+                  className="bg-cyan-100 dark:bg-slate-800 text-green-500 font-semibold px-4 py-2 rounded-full text-sm"
                 >
                   {time}
                 </span>
