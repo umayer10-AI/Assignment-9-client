@@ -126,12 +126,11 @@ const Section1 = () => {
         </div>
 
 
-        {/* <div className="grid md:grid-cols-3 gap-6 w-[80%] mx-auto py-20 px-10 rounded-xl bg-[#f1f8f9]"> */}
         <div className='w-[80%] mx-auto py-20 px-10 rounded-xl bg-[#f1f8f9]'>
-            <Marquee>
-            <div className="flex items-center gap-7 ">
+            <Marquee speed={80}>
+            <div className="flex items-center gap-10">
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div className="bg-white w-110 p-6 border border-cyan-500 rounded-xl transition">
             <div className="text-4xl mb-4">🩺</div>
             <h3 className="text-xl font-semibold mb-2">Doctor Consultation</h3>
             <p className="text-slate-600">
@@ -139,7 +138,7 @@ const Section1 = () => {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div className="bg-white w-110 p-6 rounded-xl border border-cyan-500 transition">
             <div className="text-4xl mb-4">📅</div>
             <h3 className="text-xl font-semibold mb-2">Easy Appointment</h3>
             <p className="text-slate-600">
@@ -147,7 +146,7 @@ const Section1 = () => {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div className="bg-white w-110 p-6 rounded-xl border border-cyan-500 transition">
             <div className="text-4xl mb-4">💊</div>
             <h3 className="text-xl font-semibold mb-2">Medicine Reminder</h3>
             <p className="text-slate-600">
