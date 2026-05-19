@@ -26,7 +26,7 @@ const Nav1 = ({ mobile }) => {
 
     if (!mobile) {
         return (
-            <div className='flex items-center gap-7 text-black'>
+            <div className='flex items-center gap-7 text-black dark:text-white'>
                 {
                     links.map(v => (
                         <Link key={v.name} href={v.path}>
