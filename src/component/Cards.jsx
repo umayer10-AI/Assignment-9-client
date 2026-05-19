@@ -7,7 +7,7 @@ const Cards = ({doctor}) => {
 
     return (
         <div>
-            <div className="max-w-sm rounded-2xl hover:-translate-y-2 h-full overflow-hidden group border border-slate-200 shadow-lg bg-white hover:shadow-xl hover:shadow-cyan-500 transition-all duration-300">
+            <div className="rounded-2xl hover:-translate-y-2 h-full overflow-hidden group border border-slate-200 shadow-lg bg-white hover:shadow-xl hover:shadow-cyan-500 transition-all duration-300">
 
             <div className="relative h-60 w-full">
                 <Image

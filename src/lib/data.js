@@ -6,7 +6,6 @@ export const getData = async(search) => {
     else{
         res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/user?search=${search}`)
     }
-    console.log(search)
     return res.json()
 }
 
