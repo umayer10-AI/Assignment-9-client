@@ -5,7 +5,7 @@ import Section1 from '../component/Section1';
 import Section2 from '@/component/Section2';
 
 export const metadata = {
-  title: "DocAppoint - Home",
+  title: "Home - DocAppoint",
   description: "Home Page",
 };
 
