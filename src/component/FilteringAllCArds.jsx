@@ -6,7 +6,7 @@ import { Data } from '@/context/Context';
 
 const FilteringAllCArds = () => {
 
-    const {data, setData} = useContext(Data);
+    const {data,setData,sort,setSort} = useContext(Data);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,7 +17,19 @@ const FilteringAllCArds = () => {
         fetchData();
     }, []);
 
-    return <AllCards data={data}></AllCards>
+    let filterData = [...data]
+
+    if(sort==="high"){
+        filterData = [...data].sort((a,b) => b.fee - a.fee)
+    }
+    else if(sort==="low"){
+        filterData = [...data].sort((a,b) => a.fee - b.fee)
+    }
+    else{
+        filterData = [...data]
+    }
+
+    return <AllCards data={filterData}></AllCards>
 };
 
 export default FilteringAllCArds;
