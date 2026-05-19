@@ -13,16 +13,16 @@ const ToggleBtn = () => {
       {({isSelected}) => (
         <>
           <Switch.Control
-            className={`h-[31px] w-[51px] bg-blue-500 ${isSelected ? "bg-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.5)]" : ""}`}
+            className={`h-[25px] w-10 bg-cyan-600 ${isSelected ? "bg-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.5)]" : ""}`}
           >
             <Switch.Thumb
-              className={`size-[27px] bg-white shadow-sm ${isSelected ? "ms-[22px] shadow-lg" : ""}`}
+              className={`size-5 bg-white shadow-sm ${isSelected ? "ms-[17px] shadow-lg" : ""}`}
             >
               <Switch.Icon>
                 {isSelected ? (
-                  <Sun className="size-4 text-cyan-600" />
+                  <Sun className="size-3 text-cyan-600" />
                 ) : (
-                  <Moon className="size-4 text-blue-600" />
+                  <Moon className="size-3 text-blue-600" />
                 )}
               </Switch.Icon>
             </Switch.Thumb>

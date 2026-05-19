@@ -4,7 +4,6 @@ import { Avatar } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import toast from 'react-hot-toast';
 import { MdLogout } from 'react-icons/md';
 import ToggleBtn from './ToggleBtn';
 
