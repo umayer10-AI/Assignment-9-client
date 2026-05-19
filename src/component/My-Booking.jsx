@@ -3,12 +3,17 @@ import { deleteBookingData } from "@/lib/action";
 import React from "react";
 import { FaCalendarAlt, FaClock, FaEdit, FaTrash } from "react-icons/fa";
 import EditModal from "./EditModal";
+import { authClient } from "@/lib/auth-client";
 
 const AppointmentCard = ({appointment}) => {
 
     const b = async () => {
-        await deleteBookingData(appointment._id)
-        // console.log(appointment._id)
+
+        const token = await authClient.token()
+        const t = token?.data
+
+        await deleteBookingData(appointment._id,t)
+        // console.log(t)
     }
 
   return (

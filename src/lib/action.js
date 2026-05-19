@@ -18,9 +18,12 @@ export const postData = async (v,t) => {
     return data
 }
 
-export const deleteBookingData = async (id) => {
+export const deleteBookingData = async (id,t) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`,{
-        method: "DELETE"
+        method: "DELETE",
+        headers:{
+            authorization: `Bearer ${t?.token}`
+        }
     })
     const data = await res.json()
     if(data.deletedCount > 0){
@@ -30,11 +33,12 @@ export const deleteBookingData = async (id) => {
     return data
 }
 
-export const updateUserData = async (v,id) => {
+export const updateUserData = async (v,id,t) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`,{
         method: "PATCH",
         headers:{
-            'content-type':"application/json"
+            'content-type':"application/json",
+            authorization: `Bearer ${t?.token}`
         },
         body: JSON.stringify(v)
     })

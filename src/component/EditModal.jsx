@@ -13,13 +13,16 @@ const EditModal = ({p}) => {
 
     const a = async (v) => {
 
+        const token = await authClient.token()
+        const t = token?.data
+
         const b = {
             patient: v.name,
             date: v.date,
             time: v.time,
             reason: v.reason,
         }
-        await updateUserData(b,p._id)
+        await updateUserData(b,p._id,t)
     }
 
     return (
