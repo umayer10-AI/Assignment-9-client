@@ -1,5 +1,6 @@
 import React from 'react';
 import AllCards from '../../component/AllCards';
+import FilteringAllCArds from '@/component/FilteringAllCArds';
 
 const page = () => {
     return (
@@ -8,7 +9,8 @@ const page = () => {
                 <h2 className='text-3xl font-bold'>All Appointments</h2>
                 <h2 className=' text-gray-500 font-semibold'>Find the right doctor for you.</h2>
             </div>
-            <AllCards></AllCards>
+            <FilteringAllCArds></FilteringAllCArds>
+            {/* <AllCards></AllCards> */}
         </div>
     );
 };

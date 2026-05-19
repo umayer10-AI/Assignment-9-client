@@ -1,8 +1,10 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
 import { Button, ListBox, Modal, Surface,Select, Label } from '@heroui/react';
+import { redirect } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { FaEdit, FaHeartbeat } from 'react-icons/fa';
 
 const ProfileModal = ({p}) => {
@@ -10,12 +12,14 @@ const ProfileModal = ({p}) => {
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
-        console.log(v)
 
         await authClient.updateUser({
             name: v.name,
             image: v.image,
         })
+
+        toast.success("Profile Updated")
+        redirect('/dashboard')
     }
 
     return (

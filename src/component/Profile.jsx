@@ -2,19 +2,13 @@
 import { useSession } from "@/lib/auth-client";
 import Image from "next/image";
 import React from "react";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaEdit,
-} from "react-icons/fa";
+import {FaEnvelope,FaPhoneAlt,FaMapMarkerAlt,} from "react-icons/fa";
 import ProfileModal from "./ProfileModal";
 
 const ProfilePage = () => {
 
     const {data} = useSession()
     const user = data?.user
-    // console.log(user)
 
   return (
     <div className=" bg-[#e8fafd] rounded-2xl flex items-center justify-center px-4 py-5">
@@ -64,7 +58,6 @@ const ProfilePage = () => {
 
           </div>
 
-          {/* <button className="mt-5 inline-flex items-center gap-3 bg-linear-to-r from-cyan-700 to-cyan-500 hover:scale-105 transition-all duration-300 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg"><FaEdit />Edit Profile</button> */}
           <ProfileModal p={user}></ProfileModal>
         </div>
       </div>

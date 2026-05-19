@@ -19,9 +19,9 @@ const Banner = () => {
 
         <div className="flex flex-wrap gap-4 mb-12">
           <Link href={'/all-appointment'} className="px-6 py-3 rounded-xl bg-linear-to-r hover:scale-98  duration-300 from-cyan-700 to-cyan-500 text-white hover:bg-teal-400 font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg shadow-teal-500/20"><FaSearch />Browse Doctors</Link>
-          <button className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all duration-200 backdrop-blur-sm">
+          <Link href={'/dashboard'} className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all duration-200 backdrop-blur-sm">
             My Bookings
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-3 gap-6 max-w-lg border-t border-white/10 pt-6">

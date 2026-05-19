@@ -5,10 +5,10 @@ export const Data = createContext()
 
 const Context = ({children}) => {
 
-    const [tab, setT] = useState(0)
+    const [data, setData] = useState([]);
 
     return (
-        <Data.Provider value={{tab,setT}}>
+        <Data.Provider value={{data, setData}}>
             {children}
         </Data.Provider>
     );
