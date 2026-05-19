@@ -3,14 +3,13 @@ import React from 'react';
 const Section2 = () => {
     return (
         <div>
-            <section className="py-20 bg-white">
+            <section className="py-20 mt-10 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="grid md:grid-cols-2 gap-12 items-center">
 
-      {/* Left Content */}
       <div>
-        <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+        <span className="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold">
           Live Consultation
         </span>
 
@@ -24,7 +23,6 @@ const Section2 = () => {
           Get instant medical support without visiting the hospital.
         </p>
 
-        {/* Features */}
         <div className="space-y-4 mt-8">
 
           <div className="flex items-center gap-4">
@@ -77,10 +75,9 @@ const Section2 = () => {
 
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-4 mt-10">
 
-          <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-2xl font-semibold">
+          <button className="bg-linear-to-r from-cyan-700 to-cyan-500 hover:bg-blue-700 transition text-white px-6 py-3 rounded-2xl font-semibold">
             Start Consultation
           </button>
 
@@ -91,7 +88,6 @@ const Section2 = () => {
         </div>
       </div>
 
-      {/* Right Image */}
       <div className="relative">
 
         <img
@@ -100,20 +96,19 @@ const Section2 = () => {
           className="rounded-3xl shadow-xl w-full h-[500px] object-cover"
         />
 
-        {/* Floating Card */}
-        <div className="absolute bottom-6 left-6 bg-white shadow-xl rounded-2xl p-5 w-[260px]">
+        <div className="absolute bottom-6 left-6 bg-white shadow-xl rounded-2xl p-5 w-65">
 
           <div className="flex items-center gap-4">
 
             <img
-              src="https://i.pravatar.cc/100"
+              src="https://images.unsplash.com/photo-1647763283644-578114aba0c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjAzfHxkb2N0b3J8ZW58MHx8MHx8fDA%3D"
               alt="Doctor"
               className="w-14 h-14 rounded-full object-cover"
             />
 
             <div>
               <h4 className="font-semibold">
-                Dr. Sarah Ahmed
+                Dr. Umayer Ahmad
               </h4>
 
               <p className="text-sm text-slate-500">
@@ -129,7 +124,7 @@ const Section2 = () => {
               ● Online
             </span>
 
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">
+            <button className="bg-linear-to-r from-cyan-700 to-cyan-500 text-white px-4 py-2 rounded-xl text-sm">
               Join Call
             </button>
 
