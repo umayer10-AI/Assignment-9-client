@@ -101,7 +101,7 @@ const Loginpage = () => {
             <h2>Sign in With Google</h2>
         </button>
         <div className='flex justify-center'>
-            <Link href={'/register'} className='text-center'>Do not have an account? <span className='text-cyan-600 font-semibold'>Register</span></Link>
+            <p className='text-center'>Do not have an account? <Link href={'/register'} className='text-cyan-600 font-semibold'>Register</Link></p>
         </div>
             </div>
         </div>

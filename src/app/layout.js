@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import ProviderPage from "@/lib/provider/page";
 import { Toaster } from "react-hot-toast";
+import SmoothScrolling from "@/component/SmoothScrolling";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         <ProviderPage>
-          {children}
+          <SmoothScrolling>
+            {children}
+          </SmoothScrolling>
         </ProviderPage>
         <Footer></Footer>
         <Toaster />

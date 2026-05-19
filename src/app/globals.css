@@ -28,3 +28,11 @@
 .animate-bounceSlow2 {
   animation: bounceSlow2 4s ease-in-out infinite;
 }
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
