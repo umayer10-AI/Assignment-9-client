@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import React from 'react';
 import toast from 'react-hot-toast';
 import { MdLogout } from 'react-icons/md';
+import ToggleBtn from './ToggleBtn';
 
 const Nav2 = () => {
 
@@ -15,6 +16,7 @@ const Nav2 = () => {
 
     return (
         <div>
+            <ToggleBtn></ToggleBtn>
             {
                 user? <div className='flex items-center gap-2'>
                 <Avatar size='sm' className='border'>

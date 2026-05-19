@@ -5,6 +5,7 @@ import Footer from "../component/Footer";
 import ProviderPage from "@/lib/provider/page";
 import { Toaster } from "react-hot-toast";
 import SmoothScrolling from "@/component/SmoothScrolling";
+import ProviderTheme from "./ProviderTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en" data-theme="light"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased bg-background text-foreground`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar></Navbar>
+        <ProviderTheme>
+
+          <Navbar></Navbar>
         <ProviderPage>
           <SmoothScrolling>
             {children}
@@ -39,6 +43,8 @@ export default function RootLayout({ children }) {
         </ProviderPage>
         <Footer></Footer>
         <Toaster />
+
+        </ProviderTheme>
         </body>
     </html>
   );

@@ -1,6 +1,7 @@
+import { ThemeProvider } from 'next-themes';
 import React from 'react';
 
-const ProviderTheme = () => {
+const ProviderTheme = ({children}) => {
     return (
         <div>
             <ThemeProvider attribute="class" defaultTheme="light">
