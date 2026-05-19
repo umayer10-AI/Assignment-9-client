@@ -1,4 +1,30 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
 
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounceSlow2 {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-bounceSlow {
+  animation: bounceSlow 4s ease-in-out infinite;
+}
+
+.animate-bounceSlow2 {
+  animation: bounceSlow2 4s ease-in-out infinite;
+}
