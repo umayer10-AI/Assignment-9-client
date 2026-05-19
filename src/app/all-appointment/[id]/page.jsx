@@ -18,18 +18,21 @@ const DoctorDetailsPage = async ({params}) => {
     <div className="max-w-6xl mx-auto px-4 py-10">
       <div className="grid md:grid-cols-2 gap-10 bg-white shadow-lg rounded-3xl p-6">
         
-        <div className="relative w-full h-112 rounded-2xl overflow-hidden">
+        <div className="relative w-full h-60 lg:h-112 rounded-2xl overflow-hidden">
           <Image
             src={doctor.image}
             alt={doctor.name}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fill
+            quality={100}
+            priority
             className="object-cover"
           />
         </div>
 
         <div className="flex flex-col justify-center">
           <p className="text-cyan-700 font-semibold text-lg">{doctor.specialty}</p>
-          <h1 className="text-4xl font-bold mt-2">{doctor.name}</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mt-2">{doctor.name}</h1>
           <p className="text-gray-500 font-semibold mt-4">{doctor.description}</p>
 
           <div className="mt-6 space-y-3">
