@@ -2,6 +2,11 @@ import React from 'react';
 import FilteringAllCArds from '@/component/FilteringAllCArds';
 import FilteringSection from '@/component/FilteringSection';
 
+export const metadata = {
+  title: "All-Appointment - DocAppoint",
+  description: "Home Page",
+};
+
 const page = async ({searchParams}) => {
 
     const {search} = await searchParams

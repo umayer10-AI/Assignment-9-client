@@ -12,7 +12,7 @@ export const postData = async (v,t) => {
     })
     const data = await res.json()
     if(data.insertedId){
-        toast.success('Data Added')
+        toast.success('Booking Confirm Successfully')
         redirect('/dashboard')
     }
     return data
@@ -44,7 +44,7 @@ export const updateUserData = async (v,id,t) => {
     })
     const data = await res.json()
     if(data.modifiedCount > 0){
-        toast.success('Data Updated')
+        toast.success('Booking Updated')
         redirect('/dashboard')
     }
     return data

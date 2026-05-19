@@ -113,7 +113,7 @@ const EditModal = ({p}) => {
                       <button slot="close"
                         type="submit" 
                         className="btn w-full bg-[#0096aa] hover:bg-[#007f90] text-white border-none normal-case text-base font-semibold rounded-xl h-12 shadow-sm transition-colors duration-200">
-                        Update Booking
+                        Save Changes
                       </button>
                     </div>
                   </form>

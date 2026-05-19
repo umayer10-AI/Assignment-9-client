@@ -66,8 +66,8 @@ const Loginpage = () => {
             name="password"
             type="password"
             validate={(value) => {
-            if (value.length < 8) {
-                return "Password must be at least 8 characters";
+            if (value.length < 6) {
+                return "Password must be at least 6 characters";
             }
             if (!/[A-Z]/.test(value)) {
                 return "Password must contain at least one uppercase letter";

@@ -5,6 +5,11 @@ import { Button, Tabs } from '@heroui/react';
 import React from 'react';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 
+export const metadata = {
+  title: "Dashboard - DocAppoint",
+  description: "Home Page",
+};
+
 const Dashboardpage = async () => {
 
     const data = await getBookingData()
