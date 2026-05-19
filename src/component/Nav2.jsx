@@ -15,7 +15,7 @@ const Nav2 = () => {
     const user = session?.user
 
     return (
-        <div>
+        <div className='flex items-center gap-7'>
             <ToggleBtn></ToggleBtn>
             {
                 user? <div className='flex items-center gap-2'>
