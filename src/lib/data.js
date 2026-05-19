@@ -3,10 +3,10 @@ export const getData = async() => {
     return res.json()
 }
 
-export const getIdData = async (id) => {
+export const getIdData = async (id,token) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/user/${id}`,{
         headers:{
-            authorization: "logged in"
+            authorization: `Bearer ${token}`
         }
     })
     return res.json()

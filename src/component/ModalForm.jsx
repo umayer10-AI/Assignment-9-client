@@ -1,6 +1,6 @@
 "use client";
 import { postData } from "@/lib/action";
-import { useSession } from "@/lib/auth-client";
+import { authClient, useSession } from "@/lib/auth-client";
 import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -15,6 +15,10 @@ const ModalForm = ({p}) => {
     const {register,handleSubmit,formState: { errors }} = useForm()
 
     const a = async (v) => {
+
+      const token = await authClient.token()
+      const t = token?.data
+      console.log(t)
         
         const b = {
             email: user?.email,
@@ -25,7 +29,7 @@ const ModalForm = ({p}) => {
             reason: v.reason,
         }
         // console.log(b)
-        await postData(b)
+        await postData(b,t)
     }
 
     return (

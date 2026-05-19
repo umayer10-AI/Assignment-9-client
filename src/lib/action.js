@@ -1,11 +1,12 @@
 import { redirect } from "next/navigation"
 import toast from "react-hot-toast"
 
-export const postData = async (v) => {
+export const postData = async (v,t) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking`,{
         method: "POST",
         headers: {
-            'content-type' : 'application/json'
+            'content-type' : 'application/json',
+            authorization: `Bearer ${t?.token}`
         },
         body: JSON.stringify(v)
     })

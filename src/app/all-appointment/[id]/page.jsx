@@ -1,12 +1,18 @@
 import ModalForm from "@/component/ModalForm";
+import { auth } from "@/lib/auth";
 import { getIdData } from "@/lib/data";
+import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 
 const DoctorDetailsPage = async ({params}) => {
 
+    const {token} = await auth.api.getToken({
+       headers: await headers()
+    })
+
     const {id} = await params
-    const doctor = await getIdData(id)
+    const doctor = await getIdData(id,token)
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
