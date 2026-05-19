@@ -13,7 +13,7 @@ const FeatureCards = async () => {
                 <h2 className='text-3xl font-bold'>Our Top Specialists</h2>
                 <h2 className='text-gray-500 font-semibold'>Consult with experienced and highly rated doctors.</h2>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto gap-8 bg-[#e8fafd] px-5 py-10 2xl:p-10 rounded-xl'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto gap-8 bg-[#e8fafd] dark:bg-blue-950 px-5 py-10 2xl:p-10 rounded-xl'>
             {
                 filterData.slice(0,3).map(v => <Cards key={v._id} doctor={v}></Cards>)
             }

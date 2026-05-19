@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className='bg-[#e8fafd] dark:bg-blue-950 shadow-sm sticky top-0 z-50'>
             <div className='flex items-center justify-between py-4 w-[90%] lg:w-[80%] mx-auto'>
 
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-2'>
                     <div className="bg-linear-to-r from-cyan-700 to-cyan-500 p-2 rounded-xl">
                         <FaHeartbeat className="text-2xl text-white" />
                     </div>

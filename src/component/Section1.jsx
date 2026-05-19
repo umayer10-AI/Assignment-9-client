@@ -5,22 +5,22 @@ const Section1 = () => {
     return (
         <div>
 
-        <section className="py-20 mt-30 bg-slate-50 overflow-hidden">
+        <section className="py-20 mt-30 bg-slate-50 dark:bg-blue-950 overflow-hidden">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
-      <h2 className="text-3xl font-bold text-slate-800">
+      <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
         How It Works
       </h2>
 
-      <p className="text-slate-600 mt-3 text-lg">
+      <p className="text-slate-600 mt-3 text-lg dark:text-gray-400">
         Book your doctor appointment in 4 simple steps
       </p>
     </div>
 
-    <div className="grid md:grid-cols-4 gap-8">
+    <div className="grid md:grid-cols-4 gap-8 dark:text-black">
 
-      <div className="bg-white p-8 rounded-3xl shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow">
+      <div className="bg-white dark:bg-cyan-100 p-8 rounded-3xl shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow">
         <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-blue-100 text-3xl">
           🔍
         </div>
@@ -34,7 +34,7 @@ const Section1 = () => {
         </p>
       </div>
 
-      <div className="bg-white p-8 rounded-3xl shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow2">
+      <div className="bg-white p-8 rounded-3xl dark:bg-cyan-100 shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow2">
         <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-green-100 text-3xl">
           📅
         </div>
@@ -48,7 +48,7 @@ const Section1 = () => {
         </p>
       </div>
 
-      <div className="bg-white p-8 rounded-3xl shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow">
+      <div className="bg-white p-8 rounded-3xl dark:bg-cyan-100 shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow">
         <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-purple-100 text-3xl">
           💳
         </div>
@@ -62,7 +62,7 @@ const Section1 = () => {
         </p>
       </div>
 
-      <div className="bg-white p-8 rounded-3xl shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow2">
+      <div className="bg-white p-8 rounded-3xl dark:bg-cyan-100 shadow-sm shadow-cyan-500 hover:shadow-2xl transition-all duration-500 text-center animate-bounceSlow2">
         <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-red-100 text-3xl">
           🩺
         </div>

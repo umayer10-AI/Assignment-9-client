@@ -53,7 +53,7 @@ const Nav1 = ({ mobile }) => {
 
             {
                 open && (
-                    <div className='absolute left-0 top-18 w-full bg-white shadow-lg border-t z-50'>
+                    <div className='absolute left-0 top-18 w-full bg-white dark:bg-blue-950 shadow-lg border-t z-50'>
 
                         <div className='flex flex-col gap-4 p-5'>
                             {
@@ -71,7 +71,7 @@ const Nav1 = ({ mobile }) => {
 
                             <div className='border-t pt-4 flex flex-col gap-3'>
                                 <Link href="/login" onClick={() => setOpen(false)}>
-                                    <button className='w-full border text-black border-cyan-600 py-2 rounded-xl font-semibold'>Login</button></Link>
+                                    <button className='w-full border text-black dark:text-white border-cyan-600 py-2 rounded-xl font-semibold'>Login</button></Link>
 
                                 <Link
                                     href="/register"
