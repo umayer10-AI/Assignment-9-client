@@ -11,8 +11,8 @@ const ProfilePage = () => {
     const user = data?.user
 
   return (
-    <div className=" bg-[#e8fafd] rounded-2xl flex items-center justify-center px-4 py-5">
-      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+    <div className=" bg-[#e8fafd] dark:bg-blue-950 rounded-2xl flex items-center justify-center px-4 py-5">
+      <div className="w-full max-w-4xl bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden">
         
         <div className="h-35 bg-linear-to-r from-cyan-700 to-cyan-500 relative">
 
@@ -30,7 +30,7 @@ const ProfilePage = () => {
 
         <div className="pt-22 pb-10 px-6 text-center">
 
-          <h1 className="text-3xl font-bold text-slate-800">{user?.name}</h1>
+          <h1 className="text-3xl font-bold text-slate-800 dark:text-white">{user?.name}</h1>
 
           <p className="text-cyan-600 font-semibold mt-2">Patient</p>
 

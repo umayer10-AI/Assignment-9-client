@@ -41,26 +41,26 @@ const ProfileModal = ({p}) => {
                         </Modal.Header>
                         <Modal.Body className="p-2">
                           <Surface>
-                            <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-gray-100">
                   <form onSubmit={handleSubmit(a)} className="space-y-4 text-slate-700">
                     
             
                     <div className="form-control w-full">
-                      <label className="label font-semibold text-sm pb-2 text-slate-800">Name</label>
+                      <label className="label font-semibold text-sm pb-2 text-slate-800 dark:text-white">Name</label>
                       <input 
                        {...register("name", { required: true })}
                         type="text" 
                         defaultValue={p?.name} 
-                        className="input input-bordered w-full bg-slate-50 border-slate-200"/>
+                        className="input input-bordered w-full bg-slate-50 border-slate-200 dark:bg-black"/>
                     </div>
 
                     <div className="form-control w-full">
-                      <label className="label font-semibold text-sm pb-2 text-slate-800">ImageURL</label>
+                      <label className="label font-semibold text-sm pb-2 text-slate-800 dark:text-white">ImageURL</label>
                       <input 
                        {...register("image", { required: true })}
                         type="url" 
                         defaultValue={p?.image}
-                        className="input input-bordered w-full bg-slate-50 border-slate-200"/>
+                        className="input input-bordered w-full bg-slate-50 border-slate-200 dark:bg-black"/>
                     </div>
 
             
