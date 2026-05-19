@@ -22,7 +22,6 @@ const SearchingData = () => {
     return (
             <div className='w-80 lg:w-90'>
                 <SearchField name="search">
-      <Label>Search</Label>
       <div className='flex items-center'>
         <SearchField.Group className={'border border-cyan-600 rounded-r-none py-5'}>
         <SearchField.SearchIcon />
