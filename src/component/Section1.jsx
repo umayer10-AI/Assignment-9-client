@@ -83,36 +83,36 @@ const Section1 = () => {
 
         <section className='mt-30'>
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-slate-800">Our Services</h2>
-          <p className="text-slate-500 font-semibold mt-2">
+          <h2 className="text-3xl font-bold text-slate-800 dark:text-white">Our Services</h2>
+          <p className="text-slate-500 dark:text-gray-400 font-semibold mt-2">
             Everything you need for better healthcare management.
           </p>
         </div>
 
-        <div className='w-[80%] mx-auto py-20 px-10 rounded-xl bg-[#f1f8f9]'>
+        <div className='w-[80%] mx-auto py-20 px-10 rounded-xl bg-[#f1f8f9] dark:bg-blue-950'>
             <Marquee speed={80}>
             <div className="flex items-center gap-10">
 
-          <div className="bg-white w-110 p-6 border border-cyan-500 rounded-xl transition">
+          <div className="bg-white dark:bg-cyan-900 w-110 p-6 border border-cyan-500 rounded-xl transition">
             <div className="text-4xl mb-4">🩺</div>
             <h3 className="text-xl font-semibold mb-2">Doctor Consultation</h3>
-            <p className="text-slate-600">
+            <p className="text-slate-600 dark:text-gray-300">
               Connect with expert doctors and specialists anytime.
             </p>
           </div>
 
-          <div className="bg-white w-110 p-6 rounded-xl border border-cyan-500 transition">
+          <div className="bg-white dark:bg-cyan-900 w-110 p-6 rounded-xl border border-cyan-500 transition">
             <div className="text-4xl mb-4">📅</div>
             <h3 className="text-xl font-semibold mb-2">Easy Appointment</h3>
-            <p className="text-slate-600">
+            <p className="text-slate-600 dark:text-gray-300">
               Schedule appointments in just a few clicks.
             </p>
           </div>
 
-          <div className="bg-white w-110 p-6 rounded-xl border border-cyan-500 transition">
+          <div className="bg-white dark:bg-cyan-900 w-110 p-6 rounded-xl border border-cyan-500 transition">
             <div className="text-4xl mb-4">💊</div>
             <h3 className="text-xl font-semibold mb-2">Medicine Reminder</h3>
-            <p className="text-slate-600">
+            <p className="text-slate-600 dark:text-gray-300">
               Never miss your medicines with smart reminders.
             </p>
           </div>
