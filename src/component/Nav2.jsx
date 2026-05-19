@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import toast from 'react-hot-toast';
+import { MdLogout } from 'react-icons/md';
 
 const Nav2 = () => {
 
@@ -20,7 +21,7 @@ const Nav2 = () => {
                     <Avatar.Image alt="John Doe" src={user?.image} />
                     <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
                 </Avatar>
-                <button onClick={async() => await authClient.signOut()} className='border border-cyan-700 text-cyan-700 font-bold rounded-xl px-4 bg-cyan-100 py-1'>Log Out</button>
+                <button onClick={async() => await authClient.signOut()} className='border border-cyan-700 text-cyan-700 font-bold rounded-xl px-4 flex items-center gap-1 bg-cyan-100 py-1'><MdLogout />Log Out</button>
             </div>
             : <div className='flex items-center gap-5 font-semibold text-black'>
                 <Link href="/login">
