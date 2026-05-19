@@ -4,7 +4,11 @@ export const getData = async() => {
 }
 
 export const getIdData = async (id) => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/user/${id}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/user/${id}`,{
+        headers:{
+            authorization: "logged in"
+        }
+    })
     return res.json()
 }
 
