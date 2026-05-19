@@ -5,12 +5,15 @@ import { FaSearch } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const Banner = () => {
     return (
         <div>
-          <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <Swiper autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }} pagination={true} modules={[Pagination, Autoplay]} className="mySwiper">
         <SwiperSlide>
           <div className='bg-black'>
             <div className="relative w-full h-[80vh] 2xl:h-[70vh] bg-cover bg-no-repeat bg-[url('/banner.avif')] text-white overflow-hidden">
