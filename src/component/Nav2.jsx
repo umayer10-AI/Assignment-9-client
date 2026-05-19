@@ -24,7 +24,7 @@ const Nav2 = () => {
                 </Avatar>
                 <button onClick={async() => await authClient.signOut()} className='border border-cyan-700 text-cyan-700 font-bold rounded-xl px-4 flex dark:text-black items-center gap-1 dark:bg-cyan-500 bg-cyan-100 py-1'><MdLogout />Log Out</button>
             </div>
-            : <div className='flex items-center gap-5 font-semibold text-black dark:text-white'>
+            : <div className='flex items-center gap-5 font-semibold'>
                 <Link href="/login">
                     {
                         p==="/login"
