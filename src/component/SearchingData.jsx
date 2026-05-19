@@ -10,8 +10,13 @@ const SearchingData = () => {
     const {s,setS} = useContext(Data)
 
     const a = () => {
-        console.log(s)
-        router.push(`/all-appointment?search=${s}`)
+
+        if(s===''){
+            router.push(`/all-appointment`)
+        }
+        else{
+            router.push(`/all-appointment?search=${s}`)
+        }
     }
 
     return (

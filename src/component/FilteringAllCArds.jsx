@@ -4,18 +4,18 @@ import React, { useContext, useEffect, useState } from 'react';
 import AllCards from './AllCards';
 import { Data } from '@/context/Context';
 
-const FilteringAllCArds = () => {
+const FilteringAllCArds = ({search}) => {
 
-    const {data,setData,sort,setSort} = useContext(Data);
+    const {data,setData,sort} = useContext(Data);
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await getData();
+            const res = await getData(search);
             setData(res);
         };
 
         fetchData();
-    }, []);
+    }, [search]);
 
     let filterData = [...data]
 
