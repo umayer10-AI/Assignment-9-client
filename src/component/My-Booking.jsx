@@ -1,7 +1,7 @@
 "use client";
 import { deleteBookingData } from "@/lib/action";
 import React from "react";
-import { FaCalendarAlt, FaClock, FaEdit, FaTrash } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaTrash } from "react-icons/fa";
 import EditModal from "./EditModal";
 import { authClient } from "@/lib/auth-client";
 
