@@ -1,7 +1,7 @@
 "use client";
-import { postData, updateUserData } from "@/lib/action";
-import { authClient, useSession } from "@/lib/auth-client";
-import {Button, Input, Label, ListBox, Modal, Surface, Select} from "@heroui/react";
+import { updateUserData } from "@/lib/action";
+import { authClient } from "@/lib/auth-client";
+import {Button, Modal, Surface} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { FaEdit, FaHeartbeat } from "react-icons/fa";
