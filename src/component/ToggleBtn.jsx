@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import {Check, Moon, Power, Sun} from "@gravity-ui/icons";
+import { Moon, Sun} from "@gravity-ui/icons";
 import {Switch} from "@heroui/react";
 import React from 'react';
 
