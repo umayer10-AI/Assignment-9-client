@@ -39,7 +39,6 @@ const DoctorDetailsPage = async ({params}) => {
             <p><span className="font-semibold">Experience:</span>{" "}{doctor.experience}</p><p>
               <span className="font-semibold">Rating:</span>{" "}⭐ {doctor.rating}</p>
 
-
             <p><span className="font-semibold">Hospital:</span>{" "}{doctor.hospital}</p>
             <p><span className="font-semibold">Location:</span>{" "}{doctor.location}</p>
             <p><span className="font-semibold">Consultation Fee:</span>{" "}<span className="font-semibold text-green-600 text-xl">৳ {doctor.fee}</span></p>
