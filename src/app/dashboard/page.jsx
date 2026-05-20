@@ -1,7 +1,7 @@
 import AppointmentCard from '@/component/My-Booking';
 import ProfilePage from '@/component/Profile';
 import { getBookingData } from '@/lib/data';
-import { Button, Tabs } from '@heroui/react';
+import { Tabs } from '@heroui/react';
 import React from 'react';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 
