@@ -46,7 +46,6 @@ const DoctorDetailsPage = async ({params}) => {
 
           <div className="mt-6">
             <h2 className="font-semibold text-lg mb-2">Availability</h2>
-            
 
             <div className="flex flex-wrap gap-3">
               {doctor.availability.map((time, index) => (
