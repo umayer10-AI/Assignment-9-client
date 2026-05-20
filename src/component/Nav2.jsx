@@ -1,5 +1,5 @@
 "use client"
-import { authClient, useSession } from '@/lib/auth-client';
+import { authClient } from '@/lib/auth-client';
 import { Avatar } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
