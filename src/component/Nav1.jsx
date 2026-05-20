@@ -55,7 +55,7 @@ const Nav1 = ({ mobile }) => {
                 open && (
                     <div className='absolute left-0 top-18 w-full bg-white dark:bg-blue-950 shadow-lg border-t z-50'>
 
-                        <div className='flex flex-col gap-4 p-5'>
+                        <div className='flex flex-col gap-4 p-5 bg-[#e8fafd] dark:bg-blue-950'>
                             {
                                 links.map(v => (
                                     <Link key={v.name} href={v.path} onClick={() => setOpen(false)}

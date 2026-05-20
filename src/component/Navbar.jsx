@@ -3,6 +3,7 @@ import React from 'react';
 import Nav1 from './Nav1';
 import Nav2 from './Nav2';
 import { FaHeartbeat } from 'react-icons/fa';
+import ToggleBtn from './ToggleBtn';
 
 const Navbar = () => {
     return (
@@ -23,7 +24,8 @@ const Navbar = () => {
                     <Nav2 />
                 </div>
 
-                <div className='md:hidden'>
+                <div className='md:hidden flex items-center gap-2'>
+                    <ToggleBtn></ToggleBtn>
                     <Nav1 mobile />
                 </div>
 
