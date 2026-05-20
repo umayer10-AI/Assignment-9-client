@@ -1,6 +1,6 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
-import { Button, Description, FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
+import { FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
