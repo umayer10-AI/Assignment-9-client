@@ -1,7 +1,9 @@
 import AppointmentCard from '@/component/My-Booking';
 import ProfilePage from '@/component/Profile';
+import { auth } from '@/lib/auth';
 import { getBookingData } from '@/lib/data';
 import { Tabs } from '@heroui/react';
+import { headers } from 'next/headers';
 import React from 'react';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 
@@ -12,7 +14,11 @@ export const metadata = {
 
 const Dashboardpage = async () => {
 
-    const data = await getBookingData()
+    const {token} = await auth.api.getToken({
+      headers: await headers()
+    })
+
+    const data = await getBookingData(token)
 
     return (
         <div className='w-[80%] mx-auto mt-5 space-y-6'>

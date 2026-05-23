@@ -26,7 +26,6 @@ const Registerpage = () => {
         if(data){
             toast.success("User Register Successfully")
             router.push('/')
-
         }
         if(error){
             toast.error(error.message)

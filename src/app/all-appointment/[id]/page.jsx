@@ -22,9 +22,9 @@ const DoctorDetailsPage = async ({params}) => {
           <Image
             src={doctor.image}
             alt={doctor.name}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             fill
-            quality={100}
+            quality={75}
             priority
             className="object-cover"
           />
