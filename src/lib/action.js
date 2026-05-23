@@ -22,7 +22,9 @@ export const deleteBookingData = async (id,t) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${id}`,{
         method: "DELETE",
         headers:{
+
             authorization: `Bearer ${t?.token}`
+            
         }
     })
     const data = await res.json()
